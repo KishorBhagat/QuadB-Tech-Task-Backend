@@ -8,6 +8,9 @@ const port = 8000 || process.env.PORT;
 app.use(cors());
 app.use(express.json());
 
+connectDB();
+
+
 app.get('/', (req, res) => {
     res.status(200).json("Working")
 })
